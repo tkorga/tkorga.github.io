@@ -15,7 +15,7 @@
   const isDark = () => root.dataset.theme ? root.dataset.theme === 'dark' : systemDark.matches;
   const syncThemeBtn = () => {
     themeBtn.setAttribute('aria-pressed', String(isDark()));
-    $$('meta[name="theme-color"]').forEach(m => m.setAttribute('content', isDark() ? '#0f0f0d' : '#f3f0e8'));
+    $$('meta[name="theme-color"]').forEach(m => m.setAttribute('content', isDark() ? '#080808' : '#ececec'));
   };
   themeBtn.addEventListener('click', () => {
     root.dataset.theme = isDark() ? 'light' : 'dark';

@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Tigistu Korga — Software Engineer</title>
-  <meta name="description" content="Tigistu Korga is a computer science student at Whitman College (class of 2027) who builds across the stack: systems software in C, and full-stack, AI-powered apps with React, Node.js and Python.">
+  <meta name="description" content="Tigistu Korga is a computer science student at Whitman College (class of 2027), open to internships and research, who builds across the stack: systems software in C, and full-stack, AI-powered apps with React, Node.js and Python.">
   <meta name="author" content="Tigistu Korga">
-  <meta name="theme-color" content="#f3f0e8" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0f0f0d" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ececec" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#080808" media="(prefers-color-scheme: dark)">
   <meta name="color-scheme" content="light dark">
   <!-- Replace with your production URL -->
   <link rel="canonical" href="https://tkorga.github.io/">
@@ -25,7 +25,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,500..800&family=Inter+Tight:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
 
   <!-- Set the theme before first paint so there is no flash -->
@@ -33,6 +33,8 @@
     try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/guy.js" defer></script>
+  <script src="assets/js/ekko.js" defer></script>
 
   <script type="application/ld+json">
   {
@@ -89,7 +91,7 @@
     <section class="hero wrap" id="top" aria-labelledby="hero-title">
       <p class="eyebrow reveal">
         <span class="status-dot" aria-hidden="true"></span>
-        CS @ Whitman College ’27 — open to internships
+        CS @ Whitman College ’27 — open to internships &amp; research
       </p>
 
       <h1 class="hero-title" id="hero-title">
@@ -119,6 +121,14 @@
       </div>
     </section>
 
+    <!-- ───────────────────────── NUMBERS ───────────────────────── -->
+    <section class="numbers wrap" aria-label="By the numbers">
+      <p class="num reveal"><span class="num-fig">91</span><span class="num-cap">Participants in my user research</span></p>
+      <p class="num reveal" style="--i:1"><span class="num-fig">82</span><span class="num-cap">Hours of audio analyzed</span></p>
+      <p class="num reveal" style="--i:2"><span class="num-fig">25%</span><span class="num-cap">Less manual review time from automation</span></p>
+      <p class="num reveal" style="--i:3"><span class="num-fig">4</span><span class="num-cap">Internships and research roles</span></p>
+    </section>
+
     <!-- ───────────────────────── ABOUT ───────────────────────── -->
     <section class="section wrap" id="about" aria-labelledby="about-title">
       <header class="section-head">
@@ -130,6 +140,7 @@
         <h2 class="section-title reveal" id="about-title">
           Curious about what happens <em>underneath</em>.
         </h2>
+        <p class="avail reveal"><span class="status-dot" aria-hidden="true"></span>Open to internships &amp; research</p>
 
         <div class="about-copy reveal">
           <p>
@@ -146,6 +157,8 @@
           </p>
         </div>
 
+        <div class="about-side">
+
         <dl class="struct reveal" aria-label="Quick facts">
           <div class="struct-open" aria-hidden="true"><span class="kw">struct</span> tigistu {</div>
           <div class="struct-row"><dt>school</dt><dd>"Whitman College"</dd></div>
@@ -153,9 +166,63 @@
           <div class="struct-row"><dt>grad</dt><dd>"May 2027"</dd></div>
           <div class="struct-row"><dt>based_in</dt><dd>"Walla Walla, WA"</dd></div>
           <div class="struct-row"><dt>focus</dt><dd>"systems · full-stack · HCI"</dd></div>
-          <div class="struct-row"><dt>seeking</dt><dd>"SWE internships"</dd></div>
+          <div class="struct-row"><dt>open_to</dt><dd>"internships · research"</dd></div>
           <div class="struct-close" aria-hidden="true">};</div>
         </dl>
+        </div>
+
+        <div class="ekko">
+          <h3 class="ekko-title reveal">Meet <em>Ekko</em>, Tigistu's agent.</h3>
+      <div class="guy-wrap reveal" data-guy>
+        <p class="guy-bubble is-in" data-guy-bubble role="status" aria-live="polite">Hi! I'm Ekko, Tigistu's agent.</p>
+        <button class="guy" type="button" aria-label="Say hi to Ekko">
+          <svg viewBox="0 0 160 190" width="160" height="190" aria-hidden="true" focusable="false">
+            <rect class="guy-ground" x="22" y="176" width="116" height="2"/>
+            <g class="guy-bob">
+              <line class="guy-line" x1="80" y1="26" x2="80" y2="40"/>
+              <rect class="guy-antenna" x="74" y="16" width="12" height="12"/>
+              <g class="guy-arm guy-arm-l"><rect x="36" y="108" width="11" height="30"/></g>
+              <g class="guy-arm guy-arm-r"><rect x="113" y="108" width="11" height="30"/></g>
+              <rect class="guy-fill" x="40" y="40" width="80" height="62"/>
+              <rect class="guy-fill" x="52" y="102" width="56" height="44"/>
+              <rect class="guy-leg" x="58" y="146" width="15" height="26"/>
+              <rect class="guy-leg" x="87" y="146" width="15" height="26"/>
+              <rect class="guy-fill" x="54" y="168" width="22" height="8"/>
+              <rect class="guy-fill" x="84" y="168" width="22" height="8"/>
+              <g class="guy-eyes">
+                <rect class="guy-eye" x="55" y="56" width="20" height="20"/>
+                <rect class="guy-eye" x="85" y="56" width="20" height="20"/>
+                <g class="guy-pupils">
+                  <rect class="guy-pupil" x="62" y="63" width="8" height="8"/>
+                  <rect class="guy-pupil" x="92" y="63" width="8" height="8"/>
+                </g>
+              </g>
+              <rect class="guy-eye" x="68" y="88" width="24" height="4"/>
+              <text class="guy-chest" x="80" y="130" text-anchor="middle">TK</text>
+            </g>
+          </svg>
+        </button>
+      </div>
+          <section class="chat reveal" data-ekko aria-label="Chat with Ekko">
+            <header class="chat-head">
+              <span class="chat-name"><span class="status-dot" aria-hidden="true"></span>Ekko</span>
+              <span class="chat-note">Scripted assistant · answers from this site</span>
+            </header>
+            <ol class="chat-log" data-ekko-log role="log" aria-live="polite" aria-label="Conversation with Ekko"></ol>
+            <div class="chat-chips" data-ekko-chips>
+              <button type="button" data-q="What does Tigistu work on?">What do you work on?</button>
+              <button type="button" data-q="Is Tigistu open to internships?">Open to internships?</button>
+              <button type="button" data-q="Tell me about the research experience">Research experience</button>
+              <button type="button" data-q="What are the projects?">Projects</button>
+              <button type="button" data-q="How do I contact Tigistu?">Contact</button>
+            </div>
+            <form class="chat-form" data-ekko-form autocomplete="off">
+              <label class="sr-only" for="ekko-input">Message Ekko</label>
+              <input id="ekko-input" data-ekko-input type="text" maxlength="300" placeholder="Ask Ekko something…" enterkeyhint="send">
+              <button class="btn btn-primary" type="submit">Send</button>
+            </form>
+          </section>
+        </div>
       </div>
     </section>
 
@@ -446,7 +513,7 @@
           Let's build something<br><em>from the bytes up.</em>
         </h2>
         <p class="section-intro reveal">
-          I'm looking for software engineering internships and interesting problems.
+          I'm open to software engineering internships and research opportunities.
           The quickest way to reach me is email.
         </p>
 
@@ -471,7 +538,7 @@
       <p>© <span data-year>2026</span> Tigistu Korga</p>
       <p class="footer-note">Vol. 1 · build 0x01 · hand-written, no frameworks, no trackers</p>
       <a class="to-top" href="#top">Return to 0x00 <span aria-hidden="true">↑</span></a>
-      <p class="colophon">Set in Instrument Serif, Geist and Geist Mono. Written in plain HTML, CSS and JavaScript with no dependencies.</p>
+      <p class="colophon">Set in Archivo, Inter Tight and Geist Mono. Written in plain HTML, CSS and JavaScript with no dependencies.</p>
     </div>
   </footer>
 </body>
