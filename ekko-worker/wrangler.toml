@@ -1,0 +1,11 @@
+name = "ekko-worker"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+[vars]
+# Origins allowed to call the worker from a browser.
+ALLOWED_ORIGINS = "https://tkorga.github.io,http://localhost:8000"
+# Which Claude model answers. Haiku is fast and cheap; claude-opus-5-5 is the most capable (about 40x the price).
+EKKO_MODEL = "claude-haiku-5-5"
+
+# The key is NOT stored here. Set it with:  npx wrangler secret put ANTHROPIC_API_KEY

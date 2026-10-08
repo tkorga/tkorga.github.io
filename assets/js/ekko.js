@@ -1,5 +1,6 @@
-/* Ekko: a small scripted site assistant. No network calls, no AI model.
-   It matches the visitor's words against the facts below and replies from them. */
+/* Ekko: the site assistant.
+   With window.EKKO_ENDPOINT set (see ekko-worker/), replies come from Claude through that Worker.
+   Otherwise, or if the Worker is unreachable, he answers from the scripted facts below. */
 (() => {
   'use strict';
 
@@ -12,6 +13,10 @@
   const input = root.querySelector('[data-ekko-input]');
   const chips = root.querySelector('[data-ekko-chips]');
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const ENDPOINT = String(window.EKKO_ENDPOINT || '').trim();
+  const note = root.querySelector('.chat-note');
+  if (note) note.textContent = ENDPOINT ? 'AI assistant · powered by Claude · can make mistakes' : 'Scripted assistant · answers from this site';
+  const history = [];   // plain-text turns sent to the AI for context
 
   /* A reply is a list of parts: plain strings, or { href, text } links. */
   const mail = (text = 'korgat@whitman.edu', subject = 'Hello from your portfolio', body = '') =>
@@ -150,17 +155,58 @@
     return li;
   };
 
+  const plainOf = parts => parts.map(p => (typeof p === 'string' ? p : p.text)).join('');
+
+  /* Turn known email/profile names in an AI reply into links (everything else stays plain text). */
+  const LINKS = {
+    'korgat@whitman.edu': 'mailto:korgat@whitman.edu',
+    'github.com/tkorga': 'https://github.com/tkorga',
+    'linkedin.com/in/tigistu': 'https://www.linkedin.com/in/tigistu',
+  };
+  const linkify = text => text.split(/(korgat@whitman\.edu|github\.com\/tkorga|linkedin\.com\/in\/tigistu)/)
+    .filter(Boolean)
+    .map(chunk => (LINKS[chunk] ? { href: LINKS[chunk], text: chunk } : chunk));
+
+  const aiReply = async () => {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 25000);
+    try {
+      const res = await fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: history.slice(-8) }),
+        signal: ctrl.signal,
+      });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      if (typeof data.reply !== 'string' || !data.reply.trim()) throw new Error('no reply');
+      return data.reply.trim();
+    } finally {
+      clearTimeout(timer);
+    }
+  };
+
   const ask = question => {
     const text = question.trim().slice(0, 300);
     if (!text) return;
     addMessage('you', [text]);
+    history.push({ role: 'user', content: text });
     const typing = addMessage('ekko', ['…']);
     typing.classList.add('is-typing');
-    setTimeout(() => {
+
+    const finish = parts => {
       typing.remove();
-      addMessage('ekko', answer(text));
+      addMessage('ekko', parts);
+      history.push({ role: 'assistant', content: plainOf(parts) });
       document.dispatchEvent(new CustomEvent('ekko:reply'));
-    }, reduced ? 0 : 550);
+    };
+
+    if (!ENDPOINT) {
+      setTimeout(() => finish(answer(text)), reduced ? 0 : 550);
+      return;
+    }
+    // AI first; if the Worker is down, slow or refuses, fall back to the scripted answer.
+    aiReply().then(reply => finish(linkify(reply))).catch(() => finish(answer(text)));
   };
 
   form.addEventListener('submit', e => {
