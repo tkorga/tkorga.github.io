@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tigistu Korga — Software Engineer</title>
+  <meta name="description" content="Tigistu Korga is a computer science student at Whitman College (class of 2027) who builds across the stack: systems software in C, and full-stack, AI-powered apps with React, Node.js and Python.">
+  <meta name="author" content="Tigistu Korga">
+  <meta name="theme-color" content="#f3f0e8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f0f0d" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <!-- Replace with your production URL -->
+  <link rel="canonical" href="https://tkorga.github.io/">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tigistu Korga — Software Engineer">
+  <meta property="og:description" content="CS @ Whitman ’27. Memory allocators and Unix shells down low; full-stack, AI-powered apps up top.">
+  <meta property="og:url" content="https://tkorga.github.io/">
+  <meta property="og:image" content="https://tkorga.github.io/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Set the theme before first paint so there is no flash -->
+  <script>
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <script src="assets/js/main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tigistu Korga",
+    "url": "https://tkorga.github.io/",
+    "jobTitle": "Software Engineer",
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Whitman College" },
+    "knowsAbout": ["Python", "JavaScript", "React", "Node.js", "C", "C++", "Systems programming", "Human-computer interaction"],
+    "sameAs": ["https://github.com/tkorga", "https://www.linkedin.com/in/tigistu"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Tigistu Korga — back to top">
+        <span class="brand-mark" aria-hidden="true">tk</span>
+        <span class="brand-name">Tigistu Korga</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list" data-nav-toggle>
+          <span class="nav-toggle-label">Menu</span>
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <ul class="nav-list" id="nav-list" data-nav-list>
+          <li><a href="#about"><span class="addr">0x10</span>About</a></li>
+          <li><a href="#skills"><span class="addr">0x20</span>Skills</a></li>
+          <li><a href="#projects"><span class="addr">0x30</span>Work</a></li>
+          <li><a href="#experience"><span class="addr">0x40</span>Path</a></li>
+          <li><a href="#contact"><span class="addr">0x50</span>Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-meta">
+        <span class="clock" aria-label="Local time in Walla Walla, Washington">
+          <span class="clock-dot" aria-hidden="true"></span>
+          <span>WW, WA</span>
+          <time data-clock>--:--</time>
+        </span>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ───────────────────────── HERO ───────────────────────── -->
+    <section class="hero wrap" id="top" aria-labelledby="hero-title">
+      <p class="eyebrow reveal">
+        <span class="status-dot" aria-hidden="true"></span>
+        CS @ Whitman College ’27 — open to internships
+      </p>
+
+      <h1 class="hero-title" id="hero-title">
+        <span class="line"><span class="word">Tigistu</span></span>
+        <span class="line"><span class="word"><em>Korga</em></span><span class="word hero-cursor" aria-hidden="true">_</span></span>
+      </h1>
+
+      <div class="hero-grid">
+        <p class="hero-lede reveal">
+          I build software at <em>both ends</em> of the stack. Down low, I write memory
+          allocators and Unix shells in C. Up top, I build full-stack, AI-powered apps
+          with React, Node.js and Python.
+        </p>
+
+        <figure class="hexdump reveal" aria-label="A hex dump of a short introduction: Hi! I’m Tigistu. I build things, bit by bit.">
+          <figcaption class="hexdump-bar">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span>$ xxd hello.txt</span>
+          </figcaption>
+          <div class="hexdump-body" data-hexdump aria-hidden="true"></div>
+        </figure>
+      </div>
+
+      <div class="hero-foot reveal">
+        <a class="btn btn-primary" href="#projects">See selected work <span aria-hidden="true">↓</span></a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── ABOUT ───────────────────────── -->
+    <section class="section wrap" id="about" aria-labelledby="about-title">
+      <header class="section-head">
+        <span class="section-addr">0x10</span>
+        <span class="section-seg">.about</span>
+      </header>
+
+      <div class="section-body about">
+        <h2 class="section-title reveal" id="about-title">
+          Curious about what happens <em>underneath</em>.
+        </h2>
+
+        <div class="about-copy reveal">
+          <p>
+            I'm a computer science student at Whitman College, graduating in May 2027. I want
+            to know how things work all the way down. I've written my own <code>malloc</code>,
+            built a Unix shell, and stepped through x86-64 binaries in GDB until they made
+            sense.
+          </p>
+          <p>
+            I also like building products. I've built full-stack apps with React, Node.js and
+            Flask and a vector-search pipeline for an AI app. As a research assistant in an
+            HCI lab, I ran user studies with 91 participants. Working at both ends helps me:
+            I think about what the machine is doing and about the person using what I build.
+          </p>
+        </div>
+
+        <dl class="struct reveal" aria-label="Quick facts">
+          <div class="struct-open" aria-hidden="true"><span class="kw">struct</span> tigistu {</div>
+          <div class="struct-row"><dt>school</dt><dd>"Whitman College"</dd></div>
+          <div class="struct-row"><dt>degree</dt><dd>"B.A. Computer Science"</dd></div>
+          <div class="struct-row"><dt>grad</dt><dd>"May 2027"</dd></div>
+          <div class="struct-row"><dt>based_in</dt><dd>"Walla Walla, WA"</dd></div>
+          <div class="struct-row"><dt>focus</dt><dd>"systems · full-stack · HCI"</dd></div>
+          <div class="struct-row"><dt>seeking</dt><dd>"SWE internships"</dd></div>
+          <div class="struct-close" aria-hidden="true">};</div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── SKILLS ───────────────────────── -->
+    <section class="section wrap" id="skills" aria-labelledby="skills-title">
+      <header class="section-head">
+        <span class="section-addr">0x20</span>
+        <span class="section-seg">.skills</span>
+      </header>
+
+      <div class="section-body">
+        <h2 class="section-title reveal" id="skills-title">
+          A full stack — the <em>other</em> kind.
+        </h2>
+        <p class="section-intro reveal">
+          These skills are arranged like the layers of a computer, from the interface down
+          to the machine. I have worked at every layer.
+        </p>
+
+        <ol class="stack" role="list">
+          <li class="layer reveal" style="--i:0">
+            <div class="layer-id"><span>L5</span>Product &amp; web</div>
+            <p class="layer-desc">Interfaces and APIs that people actually use.</p>
+            <ul class="chips" role="list">
+              <li>React</li><li>Node.js</li><li>Flask</li><li>REST APIs</li><li>Stripe API</li><li>HTML / CSS</li>
+            </ul>
+          </li>
+          <li class="layer reveal" style="--i:1">
+            <div class="layer-id"><span>L4</span>Data &amp; AI</div>
+            <p class="layer-desc">Storing, cleaning and learning from data.</p>
+            <ul class="chips" role="list">
+              <li>pandas</li><li>NumPy</li><li>scikit-learn</li><li>Matplotlib</li><li>MongoDB</li><li>PostgreSQL</li><li>Vector search</li>
+            </ul>
+          </li>
+          <li class="layer reveal" style="--i:2">
+            <div class="layer-id"><span>L3</span>Languages</div>
+            <p class="layer-desc">Choosing the right language for the job.</p>
+            <ul class="chips" role="list">
+              <li>Python</li><li>JavaScript</li><li>C</li><li>C++</li><li>Java</li><li>SQL</li>
+            </ul>
+          </li>
+          <li class="layer reveal" style="--i:3">
+            <div class="layer-id"><span>L2</span>Operating system</div>
+            <p class="layer-desc">Talking to the kernel directly.</p>
+            <ul class="chips" role="list">
+              <li>Processes &amp; signals</li><li>fork / exec / wait</li><li>Virtual memory</li><li>Unix I/O</li><li>pthreads</li><li>Linking</li>
+            </ul>
+          </li>
+          <li class="layer reveal" style="--i:4">
+            <div class="layer-id"><span>L1</span>Machine</div>
+            <p class="layer-desc">Reading what the compiler actually produced.</p>
+            <ul class="chips" role="list">
+              <li>x86-64 assembly</li><li>GDB</li><li>Memory layout</li><li>Cache locality</li><li>Bit-level ops</li>
+            </ul>
+          </li>
+        </ol>
+
+        <p class="tools reveal"><span class="tools-label">Daily tools</span> Git · Linux · VS Code · IntelliJ · PyCharm · Make · Agile / Scrum</p>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── PROJECTS ───────────────────────── -->
+    <section class="section wrap" id="projects" aria-labelledby="projects-title">
+      <header class="section-head">
+        <span class="section-addr">0x30</span>
+        <span class="section-seg">.work</span>
+      </header>
+
+      <div class="section-body">
+        <h2 class="section-title reveal" id="projects-title">Selected work.</h2>
+
+        <div class="projects">
+          <!-- Project 01 -->
+          <article class="project reveal">
+            <div class="project-visual vec" aria-hidden="true">
+              <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet">
+                <g class="vec-grid">
+                  <path d="M0 75H400M0 150H400M0 225H400M100 0V300M200 0V300M300 0V300"/>
+                </g>
+                <g class="vec-links">
+                  <path d="M212 148L168 112M212 148L256 118M212 148L238 196"/>
+                </g>
+                <circle class="vec-ring r2" cx="212" cy="148" r="70"/>
+                <circle class="vec-ring" cx="212" cy="148" r="46"/>
+                <g class="vec-pts">
+                  <circle cx="58" cy="62" r="4"/><circle cx="96" cy="210" r="4"/><circle cx="330" cy="58" r="4"/>
+                  <circle cx="348" cy="236" r="4"/><circle cx="62" cy="140" r="4"/><circle cx="300" cy="270" r="4"/>
+                  <circle cx="132" cy="262" r="4"/><circle cx="364" cy="150" r="4"/><circle cx="150" cy="40" r="4"/>
+                </g>
+                <g class="vec-hits">
+                  <circle cx="168" cy="112" r="6"/><circle cx="256" cy="118" r="6"/><circle cx="238" cy="196" r="6"/>
+                </g>
+                <circle class="vec-q" cx="212" cy="148" r="8"/>
+                <text class="vec-label" x="224" y="166">query</text>
+                <text class="vec-label" x="16" y="288">k-nearest · cosine</text>
+              </svg>
+            </div>
+            <div class="project-text">
+              <p class="project-meta"><span>01</span> Node.js · MongoDB · JavaScript · Python</p>
+              <h3 class="project-title">Aemiro — <em>personalized</em> search</h3>
+              <p>
+                A team-built full-stack app that connects an AI backend to the interface people
+                use. I designed the data pipeline that stores and retrieves vectors, so the app
+                can return fast, accurate, personalized search results.
+              </p>
+              <ul class="project-tags" role="list"><li>Full-stack</li><li>Vector retrieval</li><li>AI integration</li></ul>
+            </div>
+          </article>
+
+          <!-- Project 02 -->
+          <article class="project reveal">
+            <div class="project-visual heap" aria-hidden="true">
+              <div class="heap-row">
+                <span class="blk used" style="--w:2"><b>hdr</b>32B</span>
+                <span class="blk free" style="--w:4"><b>hdr</b>free · 64B</span>
+                <span class="blk used" style="--w:1.5"><b>hdr</b>16B</span>
+                <span class="blk free grow" style="--w:5"><b>hdr</b>free · 128B</span>
+              </div>
+              <div class="heap-axis"><span>heap start</span><span>brk ↑</span></div>
+            </div>
+            <div class="project-text">
+              <p class="project-meta"><span>02</span> C · Linux · sbrk</p>
+              <h3 class="project-title">memalloc — a drop-in <em>malloc</em></h3>
+              <p>
+                My own <code>malloc</code>, <code>calloc</code>, <code>realloc</code> and
+                <code>free</code>. It manages the heap through <code>sbrk</code> and keeps a
+                header in front of every block. Freed blocks are reused before the heap grows.
+                It compiles to a shared library, so you can load it into existing programs
+                with <code>LD_PRELOAD</code>.
+              </p>
+              <ul class="project-tags" role="list"><li>Memory management</li><li>Shared libraries</li><li>Pointer arithmetic</li></ul>
+            </div>
+          </article>
+
+          <!-- Project 03 -->
+          <article class="project reveal">
+            <div class="project-visual nono" aria-hidden="true">
+              <div class="nono-grid">
+                <span class="clue corner"></span>
+                <span class="clue col">1</span><span class="clue col">3</span><span class="clue col">3<br>1</span><span class="clue col">3</span><span class="clue col">1</span>
+                <span class="clue row">1</span><i></i><i></i><i class="on"></i><i></i><i></i>
+                <span class="clue row">3</span><i></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i>
+                <span class="clue row">5</span><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i>
+                <span class="clue row">1 1</span><i></i><i class="on"></i><i class="x"></i><i class="on late"></i><i></i>
+                <span class="clue row">1</span><i></i><i></i><i class="on"></i><i></i><i></i>
+              </div>
+            </div>
+            <div class="project-text">
+              <p class="project-meta"><span>03</span> Python Flask · React · Stripe API · Team</p>
+              <h3 class="project-title">BILLO — a <em>nonogram</em> game</h3>
+              <p>
+                An interactive logic-puzzle game for the web, with a Flask API and a React
+                front end. Players can make in-game purchases, which are processed securely
+                in real time through the Stripe API.
+              </p>
+              <ul class="project-tags" role="list"><li>Full-stack</li><li>Payments</li><li>Game logic</li></ul>
+            </div>
+          </article>
+
+          <!-- Project 04 -->
+          <article class="project reveal">
+            <div class="project-visual term" aria-hidden="true">
+              <div class="term-line"><span class="p">lsh&gt;</span> pwd</div>
+              <div class="term-out">/home/tk/labs</div>
+              <div class="term-line"><span class="p">lsh&gt;</span> cd my-shell</div>
+              <div class="term-line"><span class="p">lsh&gt;</span> ls -l</div>
+              <div class="term-out">-rw-r--r--  lsh.c<br>-rw-r--r--  main.c</div>
+              <div class="term-line"><span class="p">lsh&gt;</span> <span class="caret"></span></div>
+            </div>
+            <div class="project-text">
+              <p class="project-meta"><span>04</span> C · POSIX</p>
+              <h3 class="project-title">lsh — a Unix <em>shell</em></h3>
+              <p>
+                A small command-line shell built around a read → parse → execute loop. It
+                reads input into a growable buffer and splits it into tokens. It runs
+                programs with <code>fork</code>, <code>execvp</code> and
+                <code>waitpid</code>. The built-ins (<code>cd</code>, <code>help</code>,
+                <code>exit</code>) are looked up in a table of function pointers, so adding
+                a new one only takes a single line.
+              </p>
+              <ul class="project-tags" role="list"><li>Process control</li><li>Parsing</li><li>Function pointers</li></ul>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="archive-title reveal">More from the archive</h3>
+        <div class="archive-wrap reveal">
+          <table class="archive">
+            <thead>
+              <tr><th scope="col">Project</th><th scope="col">What it does</th><th scope="col">Built with</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row" data-hex="4e 41 53 41 20 4e 65 6f …">NASA NeoWs Explorer</th><td>Combines NASA's near-Earth object API with scraped data, then validates, cleans and reports on it automatically</td><td>Python · BeautifulSoup</td></tr>
+              <tr><th scope="row" data-hex="41 6e 69 6d 61 6c 20 53 …">Animal Shogi Engine</th><td>A team-built, test-first game engine for a 5×6 shogi variant, where each piece type is its own subclass</td><td>Java · Maven · JUnit</td></tr>
+              <tr><th scope="row" data-hex="42 2d 54 72 65 65 …">B-Tree</th><td>A generic, self-balancing B-tree with node splitting on insert</td><td>C++ templates</td></tr>
+              <tr><th scope="row" data-hex="4b 26 53 20 41 73 73 65 …">K&amp;S Assembler</th><td>Translates assembly mnemonics into 32-bit hex machine code</td><td>Python</td></tr>
+              <tr><th scope="row" data-hex="43 61 63 68 65 20 4c 61 …">Cache Lab</th><td>Benchmarks row-major vs column-major matrix sums to measure cache locality</td><td>C · Make</td></tr>
+              <tr><th scope="row" data-hex="42 69 6e 61 72 79 20 42 …">Binary Bomb &amp; Attack Lab</th><td>Reverse-engineered x86-64 binaries and wrote code-injection exploits, as a course security exercise</td><td>GDB · x86-64</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── EXPERIENCE ───────────────────────── -->
+    <section class="section wrap" id="experience" aria-labelledby="experience-title">
+      <header class="section-head">
+        <span class="section-addr">0x40</span>
+        <span class="section-seg">.path</span>
+      </header>
+
+      <div class="section-body">
+        <h2 class="section-title reveal" id="experience-title">The path so far.</h2>
+
+        <ol class="timeline" role="list">
+          <li class="tl-item reveal">
+            <p class="tl-when">Jan — Dec 2025</p>
+            <div class="tl-what">
+              <h3>Student Intern <span class="tl-org">— Communications &amp; Technology Office, Whitman College</span></h3>
+              <p>
+                Fixed hardware and network problems for students and faculty. I also
+                automated a multi-step review workflow, and I made graphics, video and social
+                content for YouTube, Instagram, TikTok, Facebook and LinkedIn.
+              </p>
+              <p class="tl-stat">−25% manual review time</p>
+            </div>
+          </li>
+          <li class="tl-item reveal">
+            <p class="tl-when">Dec 2024 — Jun 2025</p>
+            <div class="tl-what">
+              <h3>Undergraduate Research Assistant <span class="tl-org">— Wirfs-Brock Lab, Whitman CS</span></h3>
+              <p>
+                Studied how people organize, find and use their personal audio archives. I
+                helped design the survey instruments and interview protocols, and I analyzed
+                the recordings with Python and data visualization to find patterns in how
+                people sort and retrieve them.
+              </p>
+              <p class="tl-stat">91 participants · 82 hours of audio</p>
+            </div>
+          </li>
+          <li class="tl-item reveal">
+            <p class="tl-when">Feb — May 2025</p>
+            <div class="tl-what">
+              <h3>TIP102 Fellow <span class="tl-org">— CodePath</span></h3>
+              <p>
+                Intermediate technical interview prep: data structures, algorithms, and how to
+                approach and talk through problems under time pressure.
+              </p>
+            </div>
+          </li>
+          <li class="tl-item reveal">
+            <p class="tl-when">May — Aug 2024</p>
+            <div class="tl-what">
+              <h3>Software Engineering Intern <span class="tl-org">— The R.A.W. Platform (Reaching Audience Worldwide), Houston</span></h3>
+              <p>
+                Worked on features for an early-stage digital media platform. I analyzed user
+                engagement data to improve workflows, worked with the design and data teams,
+                and presented competitor research and product recommendations to the founders.
+              </p>
+            </div>
+          </li>
+          <li class="tl-item reveal">
+            <p class="tl-when">Expected May 2027</p>
+            <div class="tl-what">
+              <h3>B.A. Computer Science <span class="tl-org">— Whitman College</span></h3>
+              <p>
+                Coursework: Data Structures &amp; Algorithms, Algorithm Design &amp; Analysis,
+                Computer Systems Programming, Software Design, Applied AI/ML,
+                Human-Computer Interaction, Theory of Computation, Discrete Math &amp;
+                Functional Programming.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── CONTACT ───────────────────────── -->
+    <section class="section wrap contact" id="contact" aria-labelledby="contact-title">
+      <header class="section-head">
+        <span class="section-addr">0x50</span>
+        <span class="section-seg">.contact</span>
+      </header>
+
+      <div class="section-body">
+        <h2 class="contact-title reveal" id="contact-title">
+          Let's build something<br><em>from the bytes up.</em>
+        </h2>
+        <p class="section-intro reveal">
+          I'm looking for software engineering internships and interesting problems.
+          The quickest way to reach me is email.
+        </p>
+
+        <div class="contact-row reveal">
+          <a class="contact-email" href="mailto:korgat@whitman.edu" data-email>korgat@whitman.edu</a>
+          <button class="btn btn-ghost copy-btn" type="button" data-copy="korgat@whitman.edu">
+            <span data-copy-label>Copy</span>
+          </button>
+          <span class="sr-only" role="status" aria-live="polite" data-copy-status></span>
+        </div>
+
+        <ul class="socials reveal" role="list">
+          <li><a href="https://github.com/tkorga" rel="me noopener" target="_blank">GitHub <span aria-hidden="true">↗</span><span class="sr-only">(opens in a new tab)</span></a></li>
+          <li><a href="https://www.linkedin.com/in/tigistu" rel="me noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="sr-only">(opens in a new tab)</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span data-year>2026</span> Tigistu Korga</p>
+      <p class="footer-note">Vol. 1 · build 0x01 · hand-written, no frameworks, no trackers</p>
+      <a class="to-top" href="#top">Return to 0x00 <span aria-hidden="true">↑</span></a>
+      <p class="colophon">Set in Instrument Serif, Geist and Geist Mono. Written in plain HTML, CSS and JavaScript with no dependencies.</p>
+    </div>
+  </footer>
+</body>
+</html>
