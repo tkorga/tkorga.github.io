@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>BILLO case study — Tigistu Korga</title>
+  <meta name="description" content="Case study: BILLO, a full-stack nonogram puzzle game built with Python Flask and React, with real-time Stripe payments for in-game purchases.">
+  <meta name="author" content="Tigistu Korga">
+  <meta name="theme-color" content="#f3f0e8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f0f0d" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://tkorga.github.io/work/billo/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="BILLO — a nonogram game · Case study">
+  <meta property="og:description" content="A full-stack puzzle game with Flask, React and Stripe. Try a mini nonogram on the page.">
+  <meta property="og:url" content="https://tkorga.github.io/work/billo/">
+  <meta property="og:image" content="https://tkorga.github.io/assets/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script>
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/billo-demo.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="Tigistu Korga — home">
+        <span class="brand-mark" aria-hidden="true">tk</span>
+        <span class="brand-name">Tigistu Korga</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list" data-nav-toggle>
+          <span class="nav-toggle-label">Menu</span>
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <ul class="nav-list" id="nav-list" data-nav-list>
+          <li><a href="/#about"><span class="addr">0x10</span>About</a></li>
+          <li><a href="/#skills"><span class="addr">0x20</span>Skills</a></li>
+          <li><a href="/#projects"><span class="addr">0x30</span>Work</a></li>
+          <li><a href="/#experience"><span class="addr">0x40</span>Path</a></li>
+          <li><a href="/#contact"><span class="addr">0x50</span>Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-meta">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <header class="cs-hero wrap">
+        <p class="eyebrow reveal"><a class="back" href="/#projects"><span aria-hidden="true">←</span> All work</a></p>
+        <h1 class="cs-title reveal">BILLO, a <em>nonogram</em> game.</h1>
+        <p class="cs-lede reveal">
+          A full-stack logic-puzzle game for the web. A Flask API handles the game, a React
+          front end draws it, and the Stripe API processes in-game purchases in real time.
+        </p>
+
+        <dl class="cs-facts reveal">
+          <div><dt>Type</dt><dd>Collaborative project</dd></div>
+          <div><dt>Timeline</dt><dd>Feb — May 2025</dd></div>
+          <div><dt>Stack</dt><dd>Python Flask · React · Stripe API</dd></div>
+          <div><dt>Scope</dt><dd>Full-stack, payments</dd></div>
+        </dl>
+      </header>
+
+      <section class="cs-block wrap" aria-labelledby="cs-frame-1">
+        <p class="cs-addr">frame 0 <span>.problem</span></p>
+        <div class="cs-body">
+          <h2 id="cs-frame-1" class="cs-h reveal">A puzzle people already love, <em>online</em>.</h2>
+          <div class="cs-copy reveal">
+            <p>
+              A nonogram is a grid puzzle. Numbers beside each row and column tell you how many
+              unbroken runs of filled cells it contains, and the lengths of those runs. From the
+              clues alone, you work out which cells to fill and which to leave empty. When you're
+              done, the filled cells make a picture.
+            </p>
+            <p>
+              The goal was a web version that feels good to play and can also take payments for
+              in-game purchases. That brings two kinds of problems together. The game needs fast,
+              satisfying interaction, and the payment side has to be secure and reliable.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-block wrap" aria-labelledby="cs-frame-2">
+        <p class="cs-addr">frame 1 <span>.try-it</span></p>
+        <div class="cs-body">
+          <h2 id="cs-frame-2" class="cs-h reveal">Try a mini <em>puzzle</em>.</h2>
+          <p class="cs-note reveal">
+            This 5×5 board is a small demo of the rules, not the BILLO game itself. Click a cell
+            to fill it, click again to mark it as empty (×), and again to clear it.
+          </p>
+
+          <div class="demo reveal" data-nono>
+            <div class="demo-board" data-nono-board role="group" aria-label="5 by 5 nonogram puzzle"></div>
+            <div class="demo-side">
+              <p class="demo-status" role="status" aria-live="polite" data-nono-status>Fill in the picture using the clues.</p>
+              <button class="btn btn-ghost" type="button" data-nono-reset>Reset</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-block wrap" aria-labelledby="cs-frame-3">
+        <p class="cs-addr">frame 2 <span>.approach</span></p>
+        <div class="cs-body">
+          <h2 id="cs-frame-3" class="cs-h reveal">Three parts, <em>one</em> loop.</h2>
+          <p class="cs-note reveal">The project split into a front end, a back end and a payment provider.</p>
+
+          <ol class="flow reveal" role="list">
+            <li>
+              <span class="flow-tag">Client</span>
+              <h3>React</h3>
+              <p>The interactive board: cells, clues, and everything the player sees and touches.</p>
+            </li>
+            <li class="flow-arrow" aria-hidden="true">⇄</li>
+            <li>
+              <span class="flow-tag">Server</span>
+              <h3>Python Flask</h3>
+              <p>The API behind the game. It connects the front end to the game data and to payments.</p>
+            </li>
+            <li class="flow-arrow" aria-hidden="true">⇄</li>
+            <li>
+              <span class="flow-tag">Payments</span>
+              <h3>Stripe API</h3>
+              <p>Processes in-game purchases securely and in real time.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="cs-block wrap" aria-labelledby="cs-frame-4">
+        <p class="cs-addr">frame 3 <span>.result</span></p>
+        <div class="cs-body">
+          <h2 id="cs-frame-4" class="cs-h reveal">What I <em>built</em>.</h2>
+          <ul class="cs-list reveal" role="list">
+            <li>A full-stack, interactive nonogram game using Python Flask and React.</li>
+            <li>Stripe API integration for secure, real-time transaction processing of in-game purchases.</li>
+            <li>Collaboration with a project team over a semester (February to May 2025).</li>
+          </ul>
+
+          <p class="cs-skills reveal"><span class="tools-label">What it taught me</span>
+            Connecting a React client to a Flask API, handling payments, and splitting full-stack work across a team.</p>
+        </div>
+      </section>
+
+      <nav class="cs-next wrap" aria-label="More work">
+        <a class="btn btn-ghost" href="/#projects"><span aria-hidden="true">←</span> Back to all work</a>
+        <a class="btn btn-primary" href="/#contact">Get in touch</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span data-year>2026</span> Tigistu Korga</p>
+      <p class="footer-note">Vol. 1 · build 0x01 · hand-written, no frameworks, no trackers</p>
+      <a class="to-top" href="#main">Return to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+</body>
+</html>

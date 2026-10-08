@@ -46,7 +46,10 @@
 
   /* ---------- Active section in nav ---------- */
   const navLinks = $$('.nav-list a');
-  const sections = navLinks.map(a => $(a.getAttribute('href'))).filter(Boolean);
+  const sections = navLinks
+    .filter(a => a.getAttribute('href').startsWith('#'))
+    .map(a => $(a.getAttribute('href')))
+    .filter(Boolean);
   const spy = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
